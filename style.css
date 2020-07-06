@@ -6,9 +6,10 @@
 	--gray: #e5ebec;
 	--gray-dark: #747f81;
 	--black: #000000;
+	--rose: #e6d5e2;
 	--red: #d55140;
 	--blue: #0ac7e9;
-	--blue-porcelain: #678bc0;
+	--slate: #425470;
 }
 
 /** Fonts ###############  */
@@ -30,6 +31,7 @@ body {
 	align-items: center;
 	font-family: "Poppins", sans-serif;
 	font-size: 16px;
+	color: var(--slate);
 	width: 100vw;
 	height: 100vh;
 	background-color: var(--gray);
@@ -43,9 +45,13 @@ header {
 	margin: 1em auto;
 }
 
-/* li {
-	list-style: none;
-} */
+.red-h1 {
+	color: var(--red);
+}
+
+.blue-h1 {
+	color: var(--blue);
+}
 
 /** Main ############### */
 main {
@@ -73,8 +79,8 @@ main {
 	grid-template-columns: 1fr 1fr 1fr;
 	background-color: var(--gray-dark);
 	/* gap: 1em; */
-	width: 50em;
-	height: 50em;
+	width: 45em;
+	height: 45em;
 	align-items: center;
 	/* justify-content: center; */
 }
@@ -83,8 +89,8 @@ main {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 15em;
-	height: 15em;
+	width: 14em;
+	height: 14em;
 	background-color: var(--white-off);
 	margin: auto;
 }
@@ -102,24 +108,19 @@ main {
 }
 
 .reset-btn {
-	margin-top: 1em;
+	width: 5em;
 	font-size: 1.5em;
+	background-color: var(--rose);
+	margin-top: 1em;
+	border-radius: 8%;
 }
 
 /** lvfha ############### */
-a:link,
-a:visited {
-	color: var(--gray-light);
-	text-decoration: none;
+button:focus,
+button:hover {
+	background-color: var(--blue);
 }
 
-a:focus,
-a:hover {
-	color: var(--red-rijks);
-	text-decoration: underline;
-}
-
-a:active {
-	color: var(--gray-darkest);
-	text-decoration: underline;
+button:active {
+	background-color: var(--red);
 }

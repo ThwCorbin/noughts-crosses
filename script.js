@@ -1,9 +1,10 @@
 //* Variables ###############
 let board = document.querySelector(".board");
+let squares = document.querySelectorAll(".square");
 let resetBtn = document.querySelector(".reset-btn");
 let messageText = document.querySelector(".message-text");
 let currentColor = "red";
-let currentPlayer = "blue";
+let currentPlayer = "Noughts";
 
 //* Functions ###############
 
@@ -23,6 +24,7 @@ let checkSquare = (e) => {
 		console.log(e.target, "target is p");
 		e.target.classList.add("picked");
 		e.target.parentElement.classList.add(`${currentColor}`, "picked");
+		e.target.textContent = currentPlayer === "Noughts" ? "O" : "X";
 		changePlayer();
 		return;
 	}
@@ -30,6 +32,8 @@ let checkSquare = (e) => {
 		console.log(e.target, "target is div square");
 		e.target.classList.add(`${currentColor}`, "picked");
 		e.target.firstElementChild.classList.add("picked");
+		e.target.firstElementChild.textContent =
+			currentPlayer === "Noughts" ? "O" : "X";
 		changePlayer();
 		return;
 	}
@@ -39,5 +43,13 @@ let checkSquare = (e) => {
 board.addEventListener("click", checkSquare);
 
 resetBtn.addEventListener("click", (e) => {
-	console.log(e.target);
+	squares.forEach((square) => {
+		square.classList.remove("red", "blue", "picked");
+		square.firstElementChild.classList.remove("picked");
+		square.firstElementChild.textContent = "";
+	});
+	currentColor = "red";
+	currentPlayer = "Noughts";
+	messageText.style.color = currentColor;
+	messageText.textContent = "Noughts goes first!";
 });

@@ -2,7 +2,13 @@
 /** Variables ############### */
 :root {
 	--white: #ffffff;
+	--white-off: #f0f8ff;
+	--gray: #e5ebec;
+	--gray-dark: #747f81;
 	--black: #000000;
+	--red: #d55140;
+	--blue: #0ac7e9;
+	--blue-porcelain: #678bc0;
 }
 
 /** Fonts ###############  */
@@ -19,21 +25,27 @@
 
 /** Body & Container */
 body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	font-family: "Poppins", sans-serif;
 	font-size: 16px;
 	width: 100vw;
 	height: 100vh;
+	background-color: var(--gray);
 }
 
 /** Header ############### */
 header {
+	display: flex;
+	justify-content: center;
 	min-width: 100%;
-	padding-top: 1em;
+	margin: 1em auto;
 }
 
-li {
+/* li {
 	list-style: none;
-}
+} */
 
 /** Main ############### */
 main {
@@ -43,11 +55,39 @@ main {
 	justify-content: center;
 }
 
-/** Footer ############### */
-footer {
+.message-text {
+	color: var(--red);
+}
+
+.board {
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
+	background-color: var(--gray-dark);
+	/* gap: 1em; */
+	width: 50em;
+	height: 50em;
+	align-items: center;
+	/* justify-content: center; */
+}
+
+.square {
 	display: flex;
-	justify-content: space-around;
-	min-width: 100%;
+	justify-content: center;
+	align-items: center;
+	width: 15em;
+	height: 15em;
+	background-color: var(--white-off);
+	margin: auto;
+}
+
+.square p {
+	font-size: 8em;
+}
+
+.reset-btn {
+	margin-top: 1em;
+	font-size: 1.5em;
 }
 
 /** lvfha ############### */

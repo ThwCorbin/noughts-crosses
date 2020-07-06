@@ -1,1 +1,1 @@
-console.log("hiya");
+let board = document.querySelector(".board");

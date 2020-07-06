@@ -4,14 +4,30 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Noughts & Crosses</title>
+			<!-- Prevent 404 favicon error -->
+			<link rel="shortcut icon" href="#" />
 		<link rel="stylesheet" href="style.css"></link>
 	</head>
 	<body>
 		<header>
 			<h1>Noughts & Crosses</h1>
 		</header>
+		<div class="message">
+			<p class="message-text">Noughts goes first!</p>
+		</div>
 		<main>
-			<div class="board"></div>
+			<div class="board">
+				<div class="square sq-1"><p>X</p></div>
+				<div class="square sq-2"><p>O</p></div>
+				<div class="square sq-3"><p>X</p></div>
+				<div class="square sq-4"><p>O</p></div>
+				<div class="square sq-5"><p>X</p></div>
+				<div class="square sq-6"><p>O</p></div>
+				<div class="square sq-7"><p></p></div>
+				<div class="square sq-8"><p></p></div>
+				<div class="square sq-9"><p></p></div>
+			</div>
+			<button class="reset-btn">Reset</button>
 		</main>
 		<script src="script.js"></script>
 	</body>

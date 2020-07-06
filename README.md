@@ -1,6 +1,6 @@
 # Noughts & Crosses
 
-Play a simple version of [Noughts & Crosses](https://chambers.co.uk/search/?query=noughts+and+crosses&title=21st, Description of Noughts & Crosses game) with a friend.
+Play a simple version of [Noughts & Crosses](https://chambers.co.uk/search/?query=noughts+and+crosses&title=21st "Description of Noughts & Crosses game") with a friend.
 
 Website: https://thwcorbin.github.io/noughts-crosses/
 

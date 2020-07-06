@@ -39,10 +39,7 @@ let checkSquare = (e) => {
 	}
 };
 
-//* Event listeners ###############
-board.addEventListener("click", checkSquare);
-
-resetBtn.addEventListener("click", (e) => {
+let resetBoard = () => {
 	squares.forEach((square) => {
 		square.classList.remove("red", "blue", "picked");
 		square.firstElementChild.classList.remove("picked");
@@ -52,4 +49,9 @@ resetBtn.addEventListener("click", (e) => {
 	currentPlayer = "Noughts";
 	messageText.style.color = currentColor;
 	messageText.textContent = "Noughts goes first!";
-});
+};
+
+//* Event listeners ###############
+board.addEventListener("click", checkSquare);
+
+resetBtn.addEventListener("click", resetBoard);

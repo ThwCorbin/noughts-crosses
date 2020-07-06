@@ -64,7 +64,6 @@ main {
 }
 
 .message-text {
-	/* font-size: 1.5em; */
 	color: var(--red);
 }
 
@@ -88,6 +87,14 @@ main {
 	height: 15em;
 	background-color: var(--white-off);
 	margin: auto;
+}
+
+.red {
+	border: 0.5em solid var(--red);
+}
+
+.blue {
+	border: 0.5em solid var(--blue);
 }
 
 .square p {
